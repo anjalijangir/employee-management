@@ -1,0 +1,20 @@
+.header {
+    background-color: #FF5733;
+    min-height: 50px;
+    padding-left: 25px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 1px 2px #000000;
+    .title {
+        .title-text {
+            line-height: 50px;
+            padding-left: 110px;
+            font-size: x-large;
+            color: #050301;
+        }
+        .title-img {
+            position: absolute;
+            max-height: 50px;
+        }
+    }
+}

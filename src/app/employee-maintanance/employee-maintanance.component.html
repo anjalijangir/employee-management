@@ -1,0 +1,26 @@
+<!--
+    Show the app-employee-list if the mode is 'List'
+    Show the app-employee if the mode is 'Add' or 'Edit' 
+-->
+
+<div class="employee-maintanance">
+    <app-employee-list *ngIf="mode == 'List'"
+        [employees] = "employees"
+        (add) = "showAdd($event)"
+        (edit) = "showEdit($event)"
+        (delete) = "handleDelete($event)"
+    >
+
+    </app-employee-list>
+
+    <app-employee *ngIf="mode == 'Add' || mode == 'Edit'"
+        [employee] = "employee"
+        [mode] = "mode"
+        (save-add) = "handleSaveAdd($event)"
+        (save-edit) = "handleSaveEdit($event)"
+        (cancel) = "handleCancelSave($event)"
+    >
+
+    </app-employee>
+
+</div>

@@ -1,16 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EmployeeModule } from 'src/app/employee-maintanance/employee.module';
+import { HeaderComponent } from 'src/app/header/header.component';
 
+
+/**
+ * Application level module. Imports all the required submodules and 3rd patry module
+ */
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    EmployeeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
